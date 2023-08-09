@@ -1,0 +1,61 @@
+    
+    import React, { useState, useEffect } from 'react';
+    import { useParams } from "react-router-dom";
+    import projectData from "../data/projectData.json";
+    import { Box, Typography, Card, CardContent, CardMedia } from "@mui/material";
+    import CodeAnimation from './CodeAnimation';
+
+    const ProjectPage = () => {
+    const { projectId } = useParams();
+    const [codeData, setCodeData] = useState('');
+
+    useEffect(() => {
+        fetch('../data/codeData.txt')
+            .then((response) => response.text())
+            .then((text) => setCodeData(text));
+        }, []);
+
+    const project = projectData.find((project) => project.id === parseInt(projectId));
+    console.log(codeData)
+
+    // const project = projectData[0];
+    const paragraphs = project.paragraph;
+    const imageUrls = project.imageUrl;
+    const subTitles = project.subTitle;
+
+    if (!project) {
+        return <Typography variant="h5">Project not found.</Typography>;
+    }
+
+    return (
+
+        <Box>
+            <CodeAnimation code={codeData} />
+            <Typography variant="h4" mb={2}>
+                {project.title}
+            </Typography>
+            <Typography variant="subtitle1" mb={2}>
+                Date: {project.date}
+            </Typography>
+            <Typography variant="subtitle1" mb={2}>
+                Status: {project.status}
+            </Typography>
+            {paragraphs.map((paragraph, index) => (
+                <Card key={index} sx={{ display: "flex", marginBottom: 2 }}>
+                    <CardMedia
+                        component="img"
+                        sx={{ width: 300, height: 300, borderRadius: 2 }}
+                        image={imageUrls[index]}
+                        alt={`Image for paragraph ${index}`}
+                    />
+                    <CardContent>
+                        <Typography variant="h6">{subTitles[index]}</Typography>
+                        <Typography variant="body1">{paragraph}</Typography>
+                    </CardContent>
+                </Card>
+            ))}
+        </Box>
+    );
+    };
+
+    export default ProjectPage;
