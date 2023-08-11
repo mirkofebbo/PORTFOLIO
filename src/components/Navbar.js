@@ -19,13 +19,6 @@ const Navbar = () => {
     setOpen(false);
   };
 
-  // Sort projects by date
-  const sortedProjects = projectData.slice().sort((a, b) => {
-    const dateA = new Date(a.date.split('/').reverse().join('-'));
-    const dateB = new Date(b.date.split('/').reverse().join('-'));
-    return dateB - dateA; // For descending order
-  });
-
   return (
     <Box
       sx={{
