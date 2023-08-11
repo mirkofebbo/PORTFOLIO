@@ -19,6 +19,13 @@ const Navbar = () => {
     setOpen(false);
   };
 
+  // Sort projects by date
+  const sortedProjects = projectData.slice().sort((a, b) => {
+    const dateA = new Date(a.date.split('/').reverse().join('-'));
+    const dateB = new Date(b.date.split('/').reverse().join('-'));
+    return dateB - dateA; // For descending order
+  });
+
   return (
     <Box
       sx={{
@@ -30,7 +37,7 @@ const Navbar = () => {
       }}
     >
       <Typography variant="h6" color="text.primary">
-        My Portfolio
+        Mirko Febbo
       </Typography>
       <Box>
         <Button color="inherit" sx={{ marginRight: 1 }} component={Link} to="/">

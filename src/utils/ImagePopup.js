@@ -1,14 +1,14 @@
 import React from 'react';
 import { Dialog, DialogContent, DialogTitle, Typography } from '@mui/material';
 
-const ImagePopup = ({ open, onClose, imageUrl, description }) => {
+const ImagePopup = ({ open, onClose, mediaUrl, description }) => {
   return (
     <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
       <DialogTitle>Image Details</DialogTitle>
       <DialogContent>
-        {imageUrl && (
+        {mediaUrl && (
           <img
-            src={imageUrl}
+            src={mediaUrl}
             alt="Selected"
             style={{ width: '100%', borderRadius: 2 }}
           />

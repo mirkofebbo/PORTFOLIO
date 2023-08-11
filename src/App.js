@@ -28,7 +28,7 @@ function App() {
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Project/:projectId" element={<ProjectPage />} />
           </Routes>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </Router>
     </Box>

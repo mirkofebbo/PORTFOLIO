@@ -1,24 +1,17 @@
 import { createTheme } from "@mui/material/styles";
 // primary: "#FFA357", // Matrix green
 
-/* 
-#00ff41   Malachite
-#008f11   Islamic Green
-#003b00   Dark Green
-#0d0208   Vampire Black
-*/
-
-const Malachite       = "#00ff41";
-const IslamicGreen    = "#008f11";
-const DarkGreen       = "#003b00";
-const VampireBlack    = "#0d0208";
+const Malachite = "#0BDA51";
+const IslamicGreen = "#008f11";
+const DarkGreen = "#003b00";
+const VampireBlack = "#0d0208";
 
 const theme = createTheme({
   palette: {
     text: {
-      primary:    Malachite, 
-      secondary:  IslamicGreen,
-      dark:       DarkGreen,
+      primary: Malachite,
+      secondary: IslamicGreen,
+      dark: DarkGreen,
     },
     background: {
       default: VampireBlack,
@@ -61,6 +54,23 @@ const theme = createTheme({
         },
         '*::-webkit-scrollbar-thumb': {
           backgroundColor: '#00ff41',
+        },
+        'a': { // Targeting all <a> tags
+          color: Malachite, // Color before clicked
+          textDecoration: 'none',
+          '&:hover': {
+            color: IslamicGreen, // Color on hover
+          },
+          '&:visited': {
+            color: DarkGreen, // Color after clicked
+          },
+        },
+      },
+    },
+    MuiDivider: { // Customization for Divider component
+      styleOverrides: {
+        root: {
+          backgroundColor: IslamicGreen, // Use the desired color
         },
       },
     },

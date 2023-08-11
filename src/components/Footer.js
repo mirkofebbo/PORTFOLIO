@@ -1,8 +1,11 @@
 import React from "react";
-import { Box, Typography, IconButton, Link } from "@mui/material";
-// import { LinkedIn, GitHub, Twitter } from "@mui/icons-material";
+import { Box, Typography, IconButton, useTheme, Divider } from "@mui/material";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Footer = () => {
+  const theme = useTheme();
   return (
     <Box
       sx={{
@@ -14,20 +17,20 @@ const Footer = () => {
         marginTop: 4,
       }}
     >
-      {/* <Typography variant="body2" color="text.primary">
-        &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+      <Typography variant="body2" color="text.primary">
+        &copy; {new Date().getFullYear()} 吃屎吧你 All rights reserved.
       </Typography>
       <Box>
-        <IconButton color="inherit" component={Link} href="https://www.linkedin.com/in/your-linkedin-profile/" target="_blank" rel="noopener">
-          <LinkedIn />
+        <IconButton component="a" href="https://www.linkedin.com/in/mirko-febbo-843982156/" target="_blank">
+          <LinkedInIcon sx={{ color: theme.palette.text.primary }} />
         </IconButton>
-        <IconButton color="inherit" component={Link} href="https://github.com/your-github-profile" target="_blank" rel="noopener">
-          <GitHub />
+        <IconButton component="a" href="https://www.instagram.com/mirko.febbo/" target="_blank">
+          <InstagramIcon sx={{ color: theme.palette.text.primary }} />
         </IconButton>
-        <IconButton color="inherit" component={Link} href="https://twitter.com/your-twitter-profile" target="_blank" rel="noopener">
-          <Twitter />
+        <IconButton component="a" href="https://github.com/mirkofebbo" target="_blank">
+          <GitHubIcon sx={{ color: theme.palette.text.primary }} />
         </IconButton>
-      </Box> */}
+      </Box>
     </Box>
   );
 };
