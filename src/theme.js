@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 // primary: "#FFA357", // Matrix green
 
-const Malachite = "#FFA500";
+const Malachite = "#0BDA51";
 const IslamicGreen = "#008f11";
 const DarkGreen = "#003b00";
 const VampireBlack = "#0d0208";
