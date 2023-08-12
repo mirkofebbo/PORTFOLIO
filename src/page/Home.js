@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div>
       <Typography variant="h4">
-        吃炒饭
+        Highlights
       </Typography>
       <Divider sx={{ marginY: 2, }} />
       <Typography variant="body2">
@@ -29,17 +29,17 @@ const Home = () => {
           >
             <CardMedia
               component="img"
-              sx={{ height: 150 }}
+              sx={{ height: 300, width: 300 }}
               image={project.mediaUrl[0]}
               alt={`Image for ${project.title}`}
             />
             <CardContent>
               <Typography variant="h6">{project.title}</Typography>
-              <Typography variant="body2">
-                Keywords: {project.keywords.join(', ')}
+              <Typography variant="body1">
+                [{project.keywords.join(', ')}]
               </Typography>
               <Typography variant="body2">
-                {`${project.description}`}
+                {`${project.oneLiner}`}
               </Typography>
             </CardContent>
           </Card>

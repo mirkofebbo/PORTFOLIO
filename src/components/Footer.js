@@ -18,7 +18,7 @@ const Footer = () => {
       }}
     >
       <Typography variant="body2" color="text.primary">
-        &copy; {new Date().getFullYear()} 吃屎吧你 All rights reserved.
+        &copy; {new Date().getFullYear()} Mirko Febbo all rights reserved.
       </Typography>
       <Box>
         <IconButton component="a" href="https://www.linkedin.com/in/mirko-febbo-843982156/" target="_blank">

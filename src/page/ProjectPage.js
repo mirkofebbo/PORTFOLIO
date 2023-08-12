@@ -94,17 +94,18 @@ const ProjectPage = () => {
 
             <Divider sx={{ marginY: 2, }} />
 
-            <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', marginBottom: 2 }}>                {videoUrl && isValidUrl(videoUrl) && (
-                <iframe
-                    width="560"
-                    height="315"
-                    src={videoUrl}
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                />
-            )}
+            <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', marginBottom: 2 }}>
+                {videoUrl && isValidUrl(videoUrl) && (
+                    <iframe
+                        width="560"
+                        height="315"
+                        src={videoUrl}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    />
+                )}
                 {videoUrl && isLocalFile(videoUrl) && (
                     <video width="560" height="315" controls>
                         <source src={videoUrl} type="video/mp4" /> {/* Change the type attribute if needed */}
@@ -119,9 +120,9 @@ const ProjectPage = () => {
             <Divider sx={{ marginY: 2, }} />
 
             {paragraph.map((paragraph, index) => (
-                <React.Fragment key={index}>
 
-                    <Card key={index} sx={{ display: "flex", flexDirection: isMobile ? 'column' : 'row', marginBottom: 2 }}>                        {mediaUrl[index] && (
+                <Card key={index} sx={{ display: "flex", flexDirection: isMobile ? 'column' : 'row', marginBottom: 2 }}>
+                    {mediaUrl[index] && (
                         <Box sx={{ width: 300 }}>
                             <Box sx={{ height: 300, borderRadius: 2 }}>
                                 {mediaUrl[index].includes('youtube.com') ? (
@@ -159,13 +160,11 @@ const ProjectPage = () => {
 
                         </Box>
                     )}
-                        <CardContent>
-                            <Typography variant="h6">{subTitle[index]}</Typography>
-                            <Typography variant="body1">{paragraph}</Typography>
-                        </CardContent>
-                    </Card>
-                    {index < paragraph.length - 1 && <Divider sx={{ marginBottom: 2 }} />}
-                </React.Fragment>
+                    <CardContent>
+                        <Typography variant="h6">{subTitle[index]}</Typography>
+                        <Typography variant="body1">{paragraph}</Typography>
+                    </CardContent>
+                </Card>
 
             ))}
 
