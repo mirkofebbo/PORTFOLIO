@@ -1,0 +1,25 @@
+@keyframes lineReveal {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  
+  .reveal-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .reveal-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background:  "#0BDA51";
+    animation: lineReveal 2s forwards;
+  }
+  

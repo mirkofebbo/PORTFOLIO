@@ -7,6 +7,8 @@ import ImagePopup from '../utils/ImagePopup';
 import CodeAnimation from '../components/CodeAnimation';
 import { useTheme } from '@mui/material/styles';
 
+import '../css/RevealAnimation.css';
+
 const isValidUrl = (url) => {
     try {
         const parsedUrl = new URL(url);
@@ -24,13 +26,13 @@ const isValidUrl = (url) => {
 const isLocalFile = (url) => url && (url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.ogg'));
 
 const ProjectPage = () => {
-    
+
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     const { projectId } = useParams();
     const project = projectData.find((project) => project.id === parseInt(projectId));
-    
+
     const [codeData, setCodeData] = useState('');
     const [openDialog, setOpenDialog] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
@@ -147,13 +149,16 @@ const ProjectPage = () => {
                                         Your browser does not support the video tag.
                                     </video>
                                 ) : (
-                                    <CardMedia
-                                        component="img"
-                                        sx={{ width: '300px', height: '300px' }}
-                                        image={mediaUrl[index]}
-                                        alt={`Image for paragraph ${index}`}
-                                        onClick={() => handleImageClick(mediaUrl[index])}
-                                    />
+                                    <Box className="reveal-container">
+                                        <CardMedia
+                                            component="img"
+                                            sx={{ width: '300px', height: '300px' }}
+                                            image={mediaUrl[index]}
+                                            alt={`Image for paragraph ${index}`}
+                                            onClick={() => handleImageClick(mediaUrl[index])}
+                                        />
+                                        <div className="reveal-mask"></div>
+                                    </Box>
                                 )}
                             </Box>
                             <Typography variant="body2" sx={{ padding: 1 }}>
