@@ -24,11 +24,13 @@ const isValidUrl = (url) => {
 const isLocalFile = (url) => url && (url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.ogg'));
 
 const ProjectPage = () => {
+    
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     const { projectId } = useParams();
     const project = projectData.find((project) => project.id === parseInt(projectId));
+    
     const [codeData, setCodeData] = useState('');
     const [openDialog, setOpenDialog] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
