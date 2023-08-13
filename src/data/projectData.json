@@ -250,20 +250,20 @@
     "keywords": [
       "goldsmiths",
       "research",
-      "api",
+      "webscraping",
       "python",
       "data_sync",
       "data_visualisation"
     ],
-    "videoUrl": "/media/MAXIMILIEN_ROBESPIERRE/0.mp4",
+    "videoUrl": "https://www.youtube.com/embed/dLlAX2MgIMM",
     "mediaUrl": [
-      "/media/MAXIMILIEN_ROBESPIERRE/0.jpg",
-      "/media/MAXIMILIEN_ROBESPIERRE/1.jpg",
-      "/media/MAXIMILIEN_ROBESPIERRE/2.jpg",
-      "/media/MAXIMILIEN_ROBESPIERRE/3.jpg",
-      "/media/MAXIMILIEN_ROBESPIERRE/4.jpg",
-      "/media/MAXIMILIEN_ROBESPIERRE/5.jpg",
-      "/media/MAXIMILIEN_ROBESPIERRE/6.jpg"
+      "/media/TRANSPARENCY/0.jpg",
+      "/media/TRANSPARENCY/1.jpg",
+      "/media/TRANSPARENCY/2.jpg",
+      "/media/TRANSPARENCY/3.jpg",
+      "/media/TRANSPARENCY/4.jpg",
+      "/media/TRANSPARENCY/5.jpg",
+      "/media/TRANSPARENCY/6.jpg"
     ],
     "imageDescription": [
       ""
@@ -276,7 +276,7 @@
       "Findings",
       "Conclusion"
     ],
-    "oneLiner": "A self-destructing machine that interprets live stock data, activating 25 modules of servo motors and gearing systems to reflect stock changes.",
+    "oneLiner": "In an era of information revolution, this project visualizes the vast influence of CEOs or 'hyper-humans' on the environment, workers, and economy.",
     "description": "",
     "paragraph": [
       "In an era where information revolution is shifting the status quo, this project aims to visualize the influence and impact of CEOs or 'hyper-humans, on the environment, workers, and economy. By offering a visual representation of their interests and actions, the project empowers the public to make informed decisions and counteract aggressive economic policies like neoliberalism.",

@@ -3,6 +3,7 @@ import { Typography, Card, CardContent, CardMedia, Box, Divider, useMediaQuery }
 import projectData from "../data/projectData.json"; // Make sure to import the correct path to your JSON file
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
+
 const Home = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -21,7 +22,7 @@ const Home = () => {
       <Typography variant="h4">Highlights</Typography>
       <Divider sx={{ marginY: 2 }} />
       <Typography variant="body2">
-        I am a human, artist and researcher, exploring...
+      I am a human, artist and researcher,  exploring the intersection of art, technology, and geopolitics. With a background in sculpture from Concordia University in Montreal, in addition to holding a data science certificate from HarvardX, and a masters in computational arts from Goldsmiths University. I am particularly interested in the ways in which data visualisation and kinetic art can be used to convey complex information in a more engaging and interactive way. I frequently incorporate digital media and fabrication techniques into my artistic practice.
       </Typography>
       <Divider sx={{ marginY: 2 }} />
       <Box
