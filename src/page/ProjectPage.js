@@ -26,7 +26,7 @@ const isValidUrl = (url) => {
 const isLocalFile = (url) => url && (url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.ogg'));
 
 const ProjectPage = () => {
-
+    
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -149,16 +149,13 @@ const ProjectPage = () => {
                                         Your browser does not support the video tag.
                                     </video>
                                 ) : (
-                                    <Box className="reveal-container">
-                                        <CardMedia
-                                            component="img"
-                                            sx={{ width: '300px', height: '300px' }}
-                                            image={mediaUrl[index]}
-                                            alt={`Image for paragraph ${index}`}
-                                            onClick={() => handleImageClick(mediaUrl[index])}
-                                        />
-                                        <div className="reveal-mask"></div>
-                                    </Box>
+                                    <CardMedia
+                                        component="img"
+                                        sx={{ width: '300px', height: '300px' }}
+                                        image={mediaUrl[index]}
+                                        alt={`Image for paragraph ${index}`}
+                                        onClick={() => handleImageClick(mediaUrl[index])}
+                                    />
                                 )}
                             </Box>
                             <Typography variant="body2" sx={{ padding: 1 }}>
