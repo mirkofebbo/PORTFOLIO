@@ -26,7 +26,7 @@ const isValidUrl = (url) => {
 const isLocalFile = (url) => url && (url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.ogg'));
 
 const ProjectPage = () => {
-    
+
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -144,8 +144,14 @@ const ProjectPage = () => {
                                         width="300"
                                         height="300"
                                         controls
+                                        onError={(e) => console.error('Video Error', e)}
                                     >
                                         <source src={mediaUrl[index]} type="video/quicktime" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                ) : mediaUrl[index].endsWith('.mp4') ? (
+                                    <video width="300" height="300" controls>
+                                        <source src={mediaUrl[index]} type="video/mp4" />
                                         Your browser does not support the video tag.
                                     </video>
                                 ) : (

@@ -1,0 +1,41 @@
+{
+    "name": "Porfolio",
+    "credit": "Mirko Febbo",
+    "scheme_version": 1,
+    "payload": [
+      {
+        "segment_id": "start",
+        "desc": "START",
+        "end_condition": {
+          "type": "END_ON_COMPLETION"
+        }
+      },
+      {
+        "segment_id": "1",
+        "desc": "1: Set up",
+        "end_condition": {
+          "type": "END_ON_COMPLETION"
+        }
+      },
+      {
+        "segment_id": "2_1",
+        "desc": "2: CRIME SCENE INVESTIGATION 1",
+        "end_condition": {
+          "type": "END_ON_COMPLETION"
+        }
+      },
+      {
+        "segment_id": "p1",
+        "desc": "2: CRIME SCENE INVESTIGATION 1 (Puzzle)",
+        "end_condition": {
+          "type": "END_WHEN_CORRECT"
+        },
+        "clues":[
+          "Can you find the symbols from the dagger on the stone?",
+          "The first symbol means ‘Gift to’",
+          "The second and third symbols mean ‘little’ and ‘Ramesses’."
+        ]
+      }
+    ]
+  }
+  
