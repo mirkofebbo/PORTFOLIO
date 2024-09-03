@@ -11,11 +11,10 @@ const Contact = () => {
         mirkofebbo@gmail.com
       </Typography>
       <Typography variant="subtitle1" mb={2}>
-        <br></br> Goldsmiths University of London
-        <br></br> 17-19 St-James Hatcham House
-        <br></br> M.Febbo@gold.ac.uk
-        <br></br> Technician: Computing
-        <br></br> Research Assistant: Neurolive
+        <br></br> Fast Familiar - Full Stack Web Dev
+        <br></br> Goldsmiths University of London - Technician - Computing 
+        <br></br> Uinversity of Art London -  Associate lecturer - Creative Computing Institute 
+        <br></br> University College London - Research Assistant - Institute of cognitive neuroscience
       </Typography>
     </Box>
   );
