@@ -59,8 +59,10 @@ const Navbar = () => {
                   >
                     {projectData.map((project, id) => (
                       <MenuItem key={id} onClick={handleClose}>
-                        <Link to={`/Project/${id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                          <Typography color="text.primary">{`{${id}: '${project.title}'}`}</Typography>
+                        <Link to={`/Project/${id}`} style={{ textDecoration: 'none', color: 'inherit'}}>
+                          <Typography color="text.primary"> 
+                            {`${id}: ${project.title.replaceAll("_"," ")}`}
+                            </Typography>
                         </Link>
                       </MenuItem>
                     ))}
