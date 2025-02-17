@@ -1,76 +1,124 @@
 import { createTheme } from "@mui/material/styles";
-// primary: "#FFA357", // Matrix green
 
-const Malachite = "#0BDA51";
-const IslamicGreen = "#008f11";
-const DarkGreen = "#003b00";
-const VampireBlack = "#0d0208";
+const DarkBackgroundGrey = "#222222"; 
+const MediumGrey = "#d5d5d5"; 
+const LightGrey = "#2E2E2E"; 
+const White = "#FFFFFF";
+const AccentOrange = "#FF6F00";
+const DarkerOrange = "#E65100"; 
+const DividerColor = "#BDBDBD";
 
 const theme = createTheme({
   palette: {
+    primary: {
+      main: MediumGrey, 
+    },
+    secondary: {
+      main: LightGrey, 
+    },
     text: {
-      primary: Malachite,
-      secondary: IslamicGreen,
-      dark: DarkGreen,
+      primary: White, 
+      secondary: MediumGrey, 
     },
     background: {
-      default: VampireBlack,
-      paper: "none",
+      default: DarkBackgroundGrey, 
+      paper: LightGrey, 
     },
+    accent: {
+      main: AccentOrange, 
+    },
+    divider: DividerColor,
   },
   typography: {
-    fontSize: 18,
+    fontSize: 16,
     fontFamily: [
-      'Share Tech Mono',
-      'monospace',
-    ].join(','),
-    // fontFamily: "'Borel, monospace",
+      "Inter",
+      "Roboto",
+      "Arial",
+      "sans-serif",
+    ].join(","),
     h1: {
-      fontSize: "3rem",
+      fontSize: "2.5rem",
+      fontWeight: 600,
+      color: White,
     },
     h2: {
-      fontSize: "2.5rem",
+      fontSize: "2rem",
+      fontWeight: 500,
+      color: White,
     },
     h3: {
-      fontSize: "2rem",
+      fontSize: "1.75rem",
+      fontWeight: 500,
+      color: MediumGrey,
     },
     body1: {
-      fontSize: "1.25rem",
+      fontSize: "1rem",
+      lineHeight: 1.8,
+      color: White,
     },
     body2: {
-      fontSize: "1rem",
+      fontSize: "0.875rem",
+      lineHeight: 1.6,
+      color: MediumGrey,
     },
   },
   components: {
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          backgroundColor: "#000000", // Black background
-          color: "#00ff41", // Matrix green text
+          backgroundColor: DarkBackgroundGrey,
+          color: White,
         },
-        '*::-webkit-scrollbar': {
-          width: '0.4em',
-          backgroundColor: '#000000',
+        "*::-webkit-scrollbar": {
+          width: "0.5em",
+          backgroundColor: DarkBackgroundGrey,
         },
-        '*::-webkit-scrollbar-thumb': {
-          backgroundColor: '#00ff41',
+        "*::-webkit-scrollbar-thumb": {
+          backgroundColor: MediumGrey,
+          borderRadius: "8px",
         },
-        'a': { // Targeting all <a> tags
-          color: Malachite, // Color before clicked
-          textDecoration: 'none',
-          '&:hover': {
-            color: IslamicGreen, // Color on hover
+        a: {
+          color: AccentOrange,
+          textDecoration: "none",
+          "&:hover": {
+            color: DarkerOrange, 
           },
-          '&:visited': {
-            color: DarkGreen, // Color after clicked
+          "&:visited": {
+            color: MediumGrey,
           },
         },
       },
     },
-    MuiDivider: { // Customization for Divider component
+    MuiDivider: {
       styleOverrides: {
         root: {
-          backgroundColor: IslamicGreen, // Use the desired color
+          backgroundColor: DividerColor,
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "none",
+          fontWeight: 500,
+          borderRadius: "8px",
+          backgroundColor: AccentOrange,
+          color: White,
+          "&:hover": {
+            backgroundColor: DarkerOrange,
+          },
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: LightGrey, 
+          // border: `2px solid ${AccentOrange}`,
+          borderRadius: "12px",
+          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+          padding: "16px",
         },
       },
     },
