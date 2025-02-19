@@ -334,5 +334,45 @@
       "For a country that brought us democracy and seeing the state it is in, I think it is important to go back to the source. For this reason, I decided to represent the incorruptible Maximilien Robespierre as he was furiously against the monarchy. More precisely, I interpreted his posture, seeing as he welcomes democracy with all his heart, from master Neo-classic painter Jacques-Louis David, in his piece « The Tennis Court Oath ». I chose this piece since it is a key event in the constitution of democratic and resonates with the ongoing manifestation in France as a highly illegal gathering. Therefore, I transposed Robespierre's position from the painting into an avant-garde style sculpture. To keep the concept actual and in correlation with history, I did not include his head since it’s in a box due to a close guillotine shave. Interestingly enough, the dismemberment coincides with the gradual dismantlement of social security in France.",
       "Echoing the vast global movement, toward popular manifestation against their respective political parties, I made the work in multiple pieces. The different individual pieces slide into one another creating a sturdy entity that elevates the power of the masses into a physical form. Much like Jacques-Louis David's research attempting to represent the power of the masses where he first started by representing the many (« The Tennis Court Oath ») but quickly realized that taking a key figure was the way to go (« The Death of Marat »), I bring back Robespierre, therefore, remembering what democracy originally meant."
   ]
+  },
+  {
+    "id": 7,
+    "title": "ELEGIES_FOR_OIL_SPILLS",
+    "date": "12/06/2024",
+    "status": "Completed",
+    "keywords": [
+      "research",
+      "api",
+      "ai",
+      "ecology",
+      "generative_art"
+    ],
+
+    "videoUrl": "https://youtu.be/muMQzBHYNMs",
+    "mediaUrl": [
+      "https://mirkoPortfolio.b-cdn.net/2024/ELEGIES_FOR_OIL_SPILLS/ai_img_1.PNG",
+      "https://mirkoPortfolio.b-cdn.net/2024/ELEGIES_FOR_OIL_SPILLS/zurich_2.jpg",
+      "https://mirkoPortfolio.b-cdn.net/2024/ELEGIES_FOR_OIL_SPILLS/zurich_6.jpg",
+      "https://mirkoPortfolio.b-cdn.net/2024/ELEGIES_FOR_OIL_SPILLS/zurich_8.jpg",
+      "https://mirkoPortfolio.b-cdn.net/2024/ELEGIES_FOR_OIL_SPILLS/zurich_9.jpg",
+      "/media/MAXIMILIEN_ROBESPIERRE/5.jpg"
+    ],
+    "imageDescription": [
+      ""
+    ],
+    "subTitle": [
+      "Intoduction",
+      "Context",
+      "Questions",
+      "UX"
+    ],
+    "oneLiner": "using data about world’s largest oil spills, ‘elegies for oil spills’ generates speculative artifacts about environmental disaster – printed in the form of a (recycled) receipt.",
+    "description": "",
+    "paragraph": [
+      "Our project aims to bring together a body of work that aims to answer the question: how do we counter the embodied ethos of extraction? How can we gather existing techniques – and develop new ways of engaging with our bodies to combat extraction’s effects? ",
+      "These contradictions are embodied in the commodities that shape our world (and enable economic and social mobility), in the unwaged work required to sustain volunteer communities, and in the natural resources required for computational work (mirrored in our current hunger for data for AI-driven systems). These cognitive dissonances shape our world and ourselves, and while they are often mapped intellectually by scholars and journalists, we are rarely equipped to understand that these broader contradictions can also express themselves as embodied and emotional experiences.",
+      "Thus, as a reply we developed Elegies for Oil Spills that asks the following questions: \n - can a machine mourn for the climate?\n- If an oil spill could speak, what would it say?\n- what can machine mimicry tell us about narratives of oil (and its spillage), and our broader understanding of ecological destruction?",
+      "Using open data about world’s largest oil spills, ‘Elegies for Oil Spills’ generates speculative artefacts about environmental disasters – printed on thermal paper in the form of a receipt.\n\nThe receipt itself acts as a generative art canvas, with a generation process inspired by the oil refinement.\nThe user selects his oil spill on the map.\nBehind the scene, a google article search is made related to the spill metadata, probing the field for potential resources to exploit.\nOnce the article selection is made, we start web scraping the articles, as an extraction process.\nThen comes the refinement pipeline, the articles are then fed to chatGPT api to generate an Elegies.\nThe poem is then sent back to chatGPT to generate a minimalist brutalist image from it.\nIt is then distributed to the viewer as a generative artwork."
+  ]
   }
 ]
